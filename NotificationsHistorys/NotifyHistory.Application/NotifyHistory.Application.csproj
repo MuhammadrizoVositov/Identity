@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Identity\Models\" />
+    <Folder Include="Common\Identity\Notification\" />
+    <Folder Include="Common\Identity\Querying\" />
+    <Folder Include="Common\Identity\Service\" />
+  </ItemGroup>
+
+</Project>

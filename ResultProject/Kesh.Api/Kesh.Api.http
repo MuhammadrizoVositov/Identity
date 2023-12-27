@@ -1,0 +1,6 @@
+@Kesh.Api_HostAddress = http://localhost:5195
+
+GET {{Kesh.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

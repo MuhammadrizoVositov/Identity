@@ -1,0 +1,23 @@
+﻿using Kesh.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Kesh.Persistance.Repositories.Interfase;
+public interface IUserInfoVerificationCodeRepository
+{
+    IQueryable<UserInfoVerificationCode> Get(Expression<Func<UserInfoVerificationCode, bool>>? predicate = default, bool asNoTracking = false);
+
+    ValueTask<UserInfoVerificationCode?> GetByIdAsync(Guid codeId, bool asNoTracking = false, CancellationToken cancellationToken = default);
+
+    ValueTask<UserInfoVerificationCode> CreateAsync(
+        UserInfoVerificationCode verificationCode,
+        bool saveChanges = true,
+        CancellationToken cancellationToken = default
+    );
+
+    ValueTask DeactivateAsync(Guid codeId, bool saveChanges = true, CancellationToken cancellationToken = default);
+}
